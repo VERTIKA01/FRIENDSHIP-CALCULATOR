@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LET'S CALCULATE</title>
+	<link rel="stylesheet"  href="style.css">
+</head>
+<body>
+   <video class="fullscreen" src="3.mp4" muted loop autoplay type="mp4" controls></video>
+   <div class="container">
+   	<div class="content">
+   		<h1>friendship percentage</h1>
+   		<div class="inputarea">
+   			<input type="text" placeholder="FRIEND 1" id="NameOne" onfocus="this.value=''">
+   			<input type="text" placeholder="FRIEND 2" id="NameTwo" onfocus="this.value=''">
+   		</div>
+   		<a href="#" onclick="love()">CALCULATE</a>
+   		<p id="print">Your friendship result is </p>
+   		<p id="statement"></p>
+   	</div>
+   </div>
+   <script>
+   	function love(){
+
+   	var name1 = document.getElementById("NameOne").value;
+   	var name2 = document.getElementById("NameTwo").value;
+   	if(name1.length<=2){
+   		alert("Enter atleast 3 character");
+   	}
+   	if(name2.length<=2){
+   		alert("Enter atleast 3 character");
+   	}
+   	else{
+   		var random =Math.floor(Math.random()*100);
+   		document.getElementById("print").innerHTML = random + " % " + "of friendship";
+   	}
+   	if(random<=10 || random<=30){
+   		document.getElementById("statement").innerHTML = "YOU SHOULD WORK ON IT"
+   	}
+   	else if(random<=31 || random<=60)
+   	{
+           document.getElementById("statement").innerHTML = "NICE FRIENDS"
+   	}
+   	else if(random<=61 || random<=90)
+   	{
+           document.getElementById("statement").innerHTML = "GOOD FRIENDS"
+   	}
+   	else if(random<=91 || random<=100)
+   	{
+           document.getElementById("statement").innerHTML = "BEST FRIENDS"
+   	}
+   }
+   </script>
+</body>
+</html>
